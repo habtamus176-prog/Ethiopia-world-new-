@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethiopia World News</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+header {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+header h1 { margin: 0; }
+nav {
+  background: #333;
+  padding: 12px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  display: inline-block;
+}
+main {
+  max-width: 850px;
+  margin: auto;
+  padding: 15px;
+}
+input {
+  width: 90%;
+  padding: 12px;
+  font-size: 16px;
+}
+article {
+  background: white;
+  padding: 18px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
 
+<header>
+<h1>🌍 Ethiopia World News</h1>
+<p>የኢትዮጵያና የዓለም ዜናዎች</p>
+</header>
+
+<nav>
+<a href="#home">መነሻ</a>
+<a href="#ethiopia">ኢትዮጵያ</a>
+<a href="#world">ዓለም</a>
+<a href="#sports">ስፖርት</a>
+<a href="#technology">ቴክኖሎጂ</a>
+<a href="#education">ትምህርት</a>
+</nav>
+
+<main id="home">
+
+<h2>ወቅታዊ ዜናዎች</h2>
+
+<input type="text" id="search"
+placeholder="ዜና ፈልግ..."
+onkeyup="searchNews()">
+
+<section id="ethiopia">
+<article>
+<h2>🇪🇹 የኢትዮጵያ ዜና</h2>
+<p>አዳዲስ የኢትዮጵያ ዜናዎች እዚህ ይቀርባሉ።</p>
+</article>
+</section>
+
+<section id="world">
+<article>
+<h2>🌍 የዓለም ዜና</h2>
+<p>ከዓለም የተለያዩ አገራት ዜናዎች።</p>
+</article>
+</section>
+
+<section id="sports">
+<article>
+<h2>⚽ ስፖርት</h2>
+<p>የስፖርት ዜናዎችና ውጤቶች።</p>
+</article>
+</section>
+
+<section id="technology">
+<article>
+<h2>💻 ቴክኖሎጂ</h2>
+<p>አዳዲስ የቴክኖሎጂ መረጃዎች።</p>
+</article>
+</section>
+
+<section id="education">
+<article>
+<h2>📚 ትምህርት</h2>
+<p>የትምህርት ዜናዎችና መረጃዎች።</p>
+</article>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Ethiopia World News</p>
+<p>ለዜናና መረጃ የተዘጋጀ ድረገጽ</p>
+</footer>
+
+<script>
+function searchNews() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let articles = document.querySelectorAll("article");
+
+  articles.forEach(article => {
+    article.style.display =
+      article.innerText.toLowerCase().includes(input)
+      ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
